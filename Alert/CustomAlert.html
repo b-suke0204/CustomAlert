@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert</title>
+    <link rel="stylesheet" href="./CustomAlert/Alert_base.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 10px auto;
+        }
+        #alertBtn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            width: 200px;
+            height: 35px;
+            font-weight: bold;
+            margin: 10px auto;
+        }
+        #alertBtn {
+            background-color: darksalmon;
+        }
+        /* 色を変更する場合は、これを追加↓ */
+        /* #alert_consent_btn {
+            color: orange;
+        } */
+    </style>
+</head>
+<body>
+    <h1>DEMO of CustomAlert</h1>
+    <p id="alertBtn">show Alert!!</p>
+    <div id="alertOK"></div>
+</body>
+<script type="module" src="./CustomAlert/Alert.js"></script>
+<script>
+    const alertBtn = document.getElementById('alertBtn');
+    const targetAlertPath = "/Alert"
+
+    showAlert();
+
+    function showAlert() {
+        alertBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            const message = "The alert was shown!";
+            CustomAlert.showAlert(message, targetAlertPath);
+        });
+    }
+</script>
+</html>

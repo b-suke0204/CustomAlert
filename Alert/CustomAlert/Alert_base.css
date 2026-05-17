@@ -1,0 +1,60 @@
+#alert_contents {
+    position: fixed;       /* スクロールしても画面全体に固定 */
+    inset: 0;              /* top:0; right:0; bottom:0; left:0; と同じ */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(130, 130, 130, 0.6); /* 背景を半透明にもできる */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+#custom_alert {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(80, 80, 80, 0.8);
+    border-radius: 5px;
+    border: 1px solid rgba(215, 215, 215, 1.0);
+    top: 45%;
+    left: 50%;
+    /* ボックス内のコンテンツを中心に表示させる */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+}
+#custom_alert_contents {
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+#alert_consent_btn {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    padding: 5.5px 16px;
+    color: rgba(0, 159, 175, 1.0);
+    cursor: pointer;
+    margin: 0;
+}
+#alert_message {
+    margin: 0;
+    padding-left: 10px;
+    color: rgb(79, 79, 79);
+}
+#alert_consent_btn:active {
+    color: rgba(0, 159, 175, 0.6);
+}
+/* 区切り線 */
+#separator {
+    position: absolute;
+    border: 0.5px solid rgba(229, 229, 229, 1.0);
+    width: 480px;
+    height: 0px;
+    margin-top: 20px;
+}
